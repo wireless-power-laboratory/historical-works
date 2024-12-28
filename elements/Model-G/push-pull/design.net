@@ -1,0 +1,22 @@
+* H:\myne\publications\6\simulations\push-pull\push-pull_actual.sxsch
+*#SIMETRIX
+V1 R4_P 0 5
+R1 R2_N 0 10k
+R2 R4_P R2_N 1k
+R3 R4_N 0 10k
+L1 Q1_D L3_N 700n IC=10m  BRANCH={IF(ANALYSIS=2,0,1)}
+R4 R4_P R4_N 1k
+L2 L3_N L2_N 700n  
+L3 R4_P L3_N 39n  
+D1 R2_N Q1_D D1N4148
+D2 R4_N L2_N D1N4148
+X$Q1 Q1_D R4_N 0 irfp250n pinnames: D G S
+X$Q2 L2_N R2_N 0 irfp250n pinnames: D G S
+C1 L2_N Q1_D 100n  
+.GRAPH L2_N curveLabel="Q2-D" nowarn=true ylog=auto xlog=auto 
+.GRAPH Q1_D curveLabel="Q1-D" nowarn=true ylog=auto xlog=auto 
+E$Probe3$TP_DIFFPRB 1 0 L2_N Q1_D 1 
+.graph 1 Curvelabel = "Diff Probe" nowarn=true yunit="V" 
+.TRAN 100n 5m UIC
+.OPTIONS Noraw
+

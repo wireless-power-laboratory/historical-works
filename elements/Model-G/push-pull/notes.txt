@@ -1,0 +1,3 @@
+With self oscillating push pull circuits, you may have to introduce an imbalance in the currents (e.g. a low value series resistor) in one of the sides of the push pull circuit in order to start the oscillation. Otherwise, since the parts are modeled as ideal parts, the oscillations can't start. 
+
+The MOSFETs are n-channel, that is they need positive pulse to be turned on. This means that we need positive charges at the gate, the diode shows the conventional direction of current so they let positive charges go to the gate only or in reality they let only electrons to leave the gate of the MOSFETS. 
